@@ -1,0 +1,17 @@
+安装依赖
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+添加软件源信息：
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+更新 yum 缓存：
+yum makecache fast
+
+安装 Docker-ce：
+yum -y install docker-ce
+
+启动 Docker 后台服务
+systemctl start docker
+
+测试运行 hello-world
+[root@runoob ~]# docker run hello-world
